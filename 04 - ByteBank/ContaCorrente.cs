@@ -13,11 +13,11 @@
         {
             return false;
         }
-        else
-        {
-            this.saldo -= valor;
-            return true;
-        }
+        
+        
+        this.saldo -= valor;
+        return true;
+        
     }
 
     public void Depositar(double valor)
@@ -31,11 +31,11 @@
         {
             return false;
         }
-        else
-        {
-            this.saldo -= valor;
-            contaDestino.Depositar(valor);
-            return true;
-        }
+        
+        
+        this.saldo -= valor;
+        contaDestino.Depositar(valor);
+        return true;
+        
     }
 }
