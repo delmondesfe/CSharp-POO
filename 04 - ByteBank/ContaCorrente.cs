@@ -1,4 +1,7 @@
-﻿public class ContaCorrente
+﻿using _05__ByteBank;
+using namespace _
+
+public class ContaCorrente
 {
     public string titular;
     public int agencia;
