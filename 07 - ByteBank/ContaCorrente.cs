@@ -15,8 +15,13 @@ namespace _07___ByteBank
 
         public Cliente Titular { get; set; }
 
-        public static int TotalDeContasCriadas { get; set; }
+        public static int _TotalDeContasCriadas { get; private set; }
 
+    
+
+
+
+        
         public int Agencia 
         {
             get
@@ -43,7 +48,7 @@ namespace _07___ByteBank
             Agencia = agencia;
             Numero = numero;
 
-            ContaCorrente.TotalDeContasCriadas++;
+            ContaCorrente._TotalDeContasCriadas++;
         }
 
 
