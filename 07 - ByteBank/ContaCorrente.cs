@@ -8,16 +8,43 @@ namespace _07___ByteBank
     public class ContaCorrente
     {
         private Cliente _titular;
-        private int agencia;
+        private int _agencia;
         private int numero;
         private double _saldo = 100;
 
 
         public Cliente Titular { get; set; }
 
-        public int Agencia { get; set; }
+        public static int TotalDeContasCriadas { get; set; }
+
+        public int Agencia 
+        {
+            get
+            {
+                return _agencia;
+            }
+            set
+            {
+                if(value <= 0)
+                {
+                    return;
+                }
+
+                _agencia = value;
+            } 
+        }
 
         public int Numero { get; set; }
+
+
+
+        public ContaCorrente(int agencia, int numero)
+        {
+            Agencia = agencia;
+            Numero = numero;
+
+            ContaCorrente.TotalDeContasCriadas++;
+        }
 
 
 
